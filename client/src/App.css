@@ -27,14 +27,6 @@ code {
     transform: translate(-50%, -50%);
 }
 
-form {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
 label {
     font-size: 1.2rem;

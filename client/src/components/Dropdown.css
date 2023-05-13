@@ -1,0 +1,29 @@
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown select {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 40px 8px 10px;
+    width: 25vw;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dropdown::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #333;
+    pointer-events: none;
+}

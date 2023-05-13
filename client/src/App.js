@@ -15,7 +15,7 @@ const App = () => {
   const [vehicleForSaleData, setvehicleForSaleData] = React.useState([]);
 
   const handleFormData = async (formData) => {
-
+    console.log(formData)
     await Axios.post('http://localhost:3001/api/search', formData)
       .then((response) => {
         console.log("Api Search Success")
@@ -27,7 +27,7 @@ const App = () => {
   }
 
   React.useEffect(() => {
-    console.log(VehiclesReturned)
+    // console.log(VehiclesReturned)
 
     VehiclesReturned.length === 0 ? setSelectShown('Form') : setSelectShown('Cards')
   }, [VehiclesReturned]);
