@@ -29,7 +29,7 @@ function Form(props) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form id="starter" onSubmit={handleSubmit}>
             <h1>
                 Answer these questions to get your type!
             </h1>
