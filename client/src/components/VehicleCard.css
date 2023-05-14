@@ -32,7 +32,14 @@
 
 .vehicle-card h2 {
     font-size: 24px;
-    margin: 10px;
+    margin-block: 10px;
+}
+
+
+.vehicle-h2 {
+    display: flex;
+    text-align: center;
+    min-height: max-content;
 }
 
 .vehicle-card p {

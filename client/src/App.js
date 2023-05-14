@@ -27,7 +27,7 @@ const App = () => {
   }
 
   React.useEffect(() => {
-    // console.log(VehiclesReturned)
+    console.log(VehiclesReturned)
 
     VehiclesReturned.length === 0 ? setSelectShown('Form') : setSelectShown('Cards')
   }, [VehiclesReturned]);

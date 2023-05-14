@@ -11,8 +11,10 @@ const VehicleCard = (props) => {
 
     return (
         <div className="vehicle-card" key={vehicle.id}>
-            <div className="h2-photo-wrapper">
+            <div className='vehicle-h2'>
                 <h2>{vehicle.make} {vehicle.model}</h2>
+            </div>
+            <div className="h2-photo-wrapper">
                 <img src={vehicle.image} alt={vehicle.make} />
             </div>
 

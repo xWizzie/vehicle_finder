@@ -20,6 +20,7 @@ app.post('/api/search', (req, res) => {
 
     const sql = "Select * from test_vehicles "
     db.query(sql, { params }, (err, result) => {
+        console.log(result)
         res.send(result)
     })
 })
