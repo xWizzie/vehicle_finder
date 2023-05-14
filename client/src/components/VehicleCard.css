@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 95vw;
     gap: 20px;
 }
 

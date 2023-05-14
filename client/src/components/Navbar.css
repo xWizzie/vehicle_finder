@@ -20,8 +20,11 @@ ul {
     padding: 0rem;
     display: flex;
     align-items: center;
+    justify-content: end;
+
     height: 100%;
     margin: 0;
+    margin-inline-end: 1rem;
 }
 
 .nav-link {
