@@ -45,9 +45,11 @@ const App = () => {
     setvehicleForSaleData(data)
     setSelectShown('Sale')
   };
+
   const handleRouteClick = (route) => {
     setSelectShown(route);
   };
+
   return (
 
     <div>
