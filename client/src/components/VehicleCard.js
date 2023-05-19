@@ -10,7 +10,7 @@ const VehicleCard = (props) => {
     };
 
     return (
-        <div className="vehicle-card" key={vehicle.id}>
+        <div className={`vehicle-card ${props.selectShown === 'Sale' ? 'cardForSale' : ''}`} key={vehicle.id}>
             <div className='vehicle-h2'>
                 <h2>{vehicle.make} {vehicle.model}</h2>
             </div>
@@ -23,7 +23,7 @@ const VehicleCard = (props) => {
 
             <div className='bottomRow'>
                 <p><span>Price:</span> ${vehicle.price}</p>
-                <button onClick={handleButtonClick}>Buy</button>
+                {props.selectShown !== 'Sale' && <button onClick={handleButtonClick}>Buy</button>}
             </div>
         </div>
     );

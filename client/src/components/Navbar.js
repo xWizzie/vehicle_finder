@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const handleBrandClick = () => {
-        window.location.reload();
+        // window.location.reload();
     };
 
     return (
@@ -14,13 +14,13 @@ const Navbar = () => {
             <div className="navbarNav" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link" >About</Link>
+                        <Link className="nav-link" to="/about"  >About</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" >Cars</Link>
+                        <Link className="nav-link" to="/cars">Cars</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" >Contact</Link>
+                        <Link className="nav-link" to="/contact">Contact</Link>
                     </li>
                 </ul>
             </div>

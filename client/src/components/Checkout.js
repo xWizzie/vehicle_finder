@@ -1,7 +1,13 @@
 import React from 'react'
 import './Checkout.css'
+import VehicleCard from './VehicleCard'
 
-function Checkout() {
+function Checkout(props) {
+
+    const vehicle = props.vehicle
+    const selectShown = props.selectShown
+
+    //change to you bought screen if info is completed
     return (
         <div >
             <h2>Checkout</h2>
@@ -64,10 +70,10 @@ function Checkout() {
                 </div>
 
                 <div className="card">
-
+                    <VehicleCard className={'cardForSale'} vehicle={vehicle} selectShown={selectShown} />
+                    <button type="submit" id='order-Button'>Place Order</button>
                 </div>
             </div>
-            <button type="submit" id='order-Button'>Place Order</button>
         </div>
     );
 }
