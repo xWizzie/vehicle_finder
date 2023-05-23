@@ -10,6 +10,7 @@ const Navbar = ({ handleRouteClick }) => {
 
             <div className="navbarNav" id="navbarNav">
                 <ul className="navbar-nav">
+
                     <li className="nav-item">
                         <Link className="nav-link" to="/about" onClick={() => handleRouteClick('About')} >About</Link>
                     </li>
@@ -19,6 +20,10 @@ const Navbar = ({ handleRouteClick }) => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/contact" onClick={() => handleRouteClick('Contact')}>Contact</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/login" handleRouteClick={handleRouteClick} onClick={() => handleRouteClick('Login')} >Login</Link>
+                    </li>
+
                 </ul>
             </div>
         </nav>
