@@ -21,6 +21,9 @@ const Navbar = ({ handleRouteClick }) => {
                         <Link className="nav-link" to="/contact" onClick={() => handleRouteClick('Contact')}>Contact</Link>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link" to="/add_listing" onClick={() => handleRouteClick('Listing')}>Add Listing</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link className="nav-link" to="/login" handleRouteClick={handleRouteClick} onClick={() => handleRouteClick('Login')} >Login</Link>
                     </li>
 

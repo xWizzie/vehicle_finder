@@ -11,6 +11,7 @@ import CarsComponent from './components/CarsComponent';
 import ContactComponent from './components/ContactComponent';
 import DefaultComponent from './components/DefaultComponent';
 import LoginComponent from './components/LoginComponent';
+import AddListingComponent from './components/AddListingComponent'
 
 const App = () => {
   const [SelectShown, setSelectShown] = React.useState("Form")
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/about" element={<AboutComponent />} />
           <Route path="/cars" element={<CarsComponent />} />
           <Route path="/contact" element={<ContactComponent />} />
+          <Route path="/add_listing" element={<AddListingComponent />} />
           <Route path="/login" element={<LoginComponent handleRouteClick={handleRouteClick} />} />
         </Routes>
 

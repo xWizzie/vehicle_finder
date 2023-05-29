@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.container form {
+    max-width: 45vw;
+    margin: 0;
+    /* flex-basis: 50%; */
+}
+
+.container .card {
+    /* flex-basis: 40%; */
+    max-width: 35vw;
+
+}
+
+.container label {
+    display: block;
+    font-size: 2rem;
+}
+
+.container form input,
+.container form textarea,
+.container form select {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.container button {
+    width: 35vw;
+}
+
+.container .card .confirmation {
+    font-size: 1.5rem;
+
+}
+
+.container .card .confirmation span {
+    color: green;
+}
+
+/* @media screen and (max-width: 768px) {
+
+    .container form,
+    .container .card {
+        flex-basis: 100%;
+    }
+} */

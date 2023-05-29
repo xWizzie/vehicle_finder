@@ -51,7 +51,7 @@ function Checkout(props) {
                             </div>
                         </div>
 
-                        <div className="payment-info">
+                        {/* <div className="payment-info">
                             <h3>Payment Information</h3>
                             <div className="form-row">
                                 <label htmlFor="card-number">Card Number</label>
@@ -65,7 +65,7 @@ function Checkout(props) {
                                 <label htmlFor="cvv">CVV</label>
                                 <input type="text" id="cvv" name="cvv" required />
                             </div>
-                        </div>
+                        </div> */}
                     </form>
                 </div>
 
