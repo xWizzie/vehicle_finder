@@ -1,11 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Checkout.css'
 import VehicleCard from './VehicleCard'
 
 function Checkout(props) {
+    const [submissionStatus, setSubmissionStatus] = useState(false);
 
     const vehicle = props.vehicle
     const selectShown = props.selectShown
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const isValid = checkFormValidity();
+        if (isValid) {
+            setSubmissionStatus(true);
+        }
+    };
+
+    const checkFormValidity = () => {
+        // Get form input values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const state = document.getElementById('state').value;
+        const zip = document.getElementById('zip').value;
+
+        // Perform validation checks
+        const isNameValid = name.trim() !== '';
+        const isEmailValid = /^\S+@\S+\.\S+$/.test(email);
+        const isPhoneValid = /^\d{10}$/.test(phone);
+        const isAddressValid = address.trim() !== '';
+        const isCityValid = city.trim() !== '';
+        const isStateValid = state.trim() !== '';
+        const isZipValid = /^\d{5}$/.test(zip);
+
+        // Return true if all fields are valid, false otherwise
+        return (
+            isNameValid &&
+            isEmailValid &&
+            isPhoneValid &&
+            isAddressValid &&
+            isCityValid &&
+            isStateValid &&
+            isZipValid
+        );
+    };
 
     //change to you bought screen if info is completed
     return (
@@ -71,7 +111,13 @@ function Checkout(props) {
 
                 <div className="card">
                     <VehicleCard className={'cardForSale'} vehicle={vehicle} selectShown={selectShown} />
-                    <button type="submit" id='order-Button'>Place Order</button>
+
+                    {submissionStatus && (
+                        <div className="confirmation">Order sent <span>successfully!</span></div>
+                    )}
+                    <button type="submit" id='order-Button' onClick={handleSubmit}>Place Order</button>
+
+
                 </div>
             </div>
         </div>

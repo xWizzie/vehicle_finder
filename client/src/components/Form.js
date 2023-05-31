@@ -31,7 +31,7 @@ function Form(props) {
     return (
         <form id="starter" onSubmit={handleSubmit}>
             <h1>
-                Answer these questions to get your type!
+                Answer these questions to get your vehicle!
             </h1>
             <div>
                 <label htmlFor="make">What do you need a vehicle for:</label>
